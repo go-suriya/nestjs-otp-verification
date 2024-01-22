@@ -20,7 +20,8 @@ export class ResendOtpService {
 
     const otpCode = generateOTP();
     const otpRef = generateReferenceOTP();
-    const futureDate = new Date(Date.now() + 5 * 60 * 1000);
+    const minutes = 5;
+    const futureDate = calculateFutureDate(minutes);
 
     const user: UserEntity = {
       email,

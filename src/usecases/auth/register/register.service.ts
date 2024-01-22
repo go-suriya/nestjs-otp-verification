@@ -32,7 +32,8 @@ export class RegisterService {
 
     const otpCode = generateOTP();
     const otpRef = generateReferenceOTP();
-    const futureDate = new Date(Date.now() + 5 * 60 * 1000);
+    const minutes = 5;
+    const futureDate = calculateFutureDate(minutes);
 
     const user: UserEntity = {
       username,
@@ -47,7 +48,7 @@ export class RegisterService {
   }
 
   private async sendMail(user: UserEntity): Promise<SentMessageInfo> {
-    const { otp_code,otp_reference, email } = user;
+    const { otp_code, otp_reference, email } = user;
     const subject = 'Email Verification';
     const message = `Your OTP code is: ${otp_code} OTP ref is: ${otp_reference}`;
 
