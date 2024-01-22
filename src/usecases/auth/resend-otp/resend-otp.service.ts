@@ -7,6 +7,7 @@ import { SendMailService } from 'src/usecases/mail/send-mail/send-mail.service';
 import { generateOTP, generateReferenceOTP } from 'src/utils/generate-otp';
 import { SentMessageInfo } from 'nodemailer';
 import { UpdateResult } from 'typeorm';
+import { calculateFutureDate } from 'src/utils/calculate-future-date';
 
 @Injectable()
 export class ResendOtpService {

@@ -7,6 +7,7 @@ import { SendMailService } from 'src/usecases/mail/send-mail/send-mail.service';
 import { SendMail } from 'src/usecases/mail/send-mail/types';
 import { generateOTP, generateReferenceOTP } from 'src/utils/generate-otp';
 import { SentMessageInfo } from 'nodemailer';
+import { calculateFutureDate } from 'src/utils/calculate-future-date';
 
 @Injectable()
 export class RegisterService {
