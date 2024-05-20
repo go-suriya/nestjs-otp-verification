@@ -1,7 +1,6 @@
-import { Injectable } from '@nestjs/common';
-import { SendMail } from './types';
-import { SentMessageInfo } from 'nodemailer';
 import { ISendMailOptions, MailerService } from '@nestjs-modules/mailer';
+import { Injectable } from '@nestjs/common';
+import { SentMessageInfo } from 'nodemailer';
 
 @Injectable()
 export class SendMailService {

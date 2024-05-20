@@ -1,13 +1,12 @@
 import { ISendMailOptions } from '@nestjs-modules/mailer';
 import { Injectable } from '@nestjs/common';
+import { SentMessageInfo } from 'nodemailer';
 import { UserEntity } from 'src/database/entities/user.entity';
 import { RegisterDto } from 'src/modules/auth/dto/create-register.dto';
 import { UserRepositoryService } from 'src/repositories/user-repository/user-repository.service';
 import { SendMailService } from 'src/usecases/mail/send-mail/send-mail.service';
-import { SendMail } from 'src/usecases/mail/send-mail/types';
-import { generateOTP, generateReferenceOTP } from 'src/utils/generate-otp';
-import { SentMessageInfo } from 'nodemailer';
 import { calculateFutureDate } from 'src/utils/calculate-future-date';
+import { generateOTP, generateReferenceOTP } from 'src/utils/generate-otp';
 
 @Injectable()
 export class RegisterService {

@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { RegisterDto } from './dto/create-register.dto';
 import { RegisterService } from 'src/usecases/auth/register/register.service';
-import { ResendOtpDto } from './dto/resend-otp.dto';
 import { ResendOtpService } from 'src/usecases/auth/resend-otp/resend-otp.service';
-import { VerifyDto } from './dto/verify.dto';
 import { VerifyEmailService } from 'src/usecases/auth/verify-email/verify-email.service';
+import { RegisterDto } from './dto/create-register.dto';
+import { ResendOtpDto } from './dto/resend-otp.dto';
+import { VerifyDto } from './dto/verify.dto';
 
 @Injectable()
 export class AuthService {
